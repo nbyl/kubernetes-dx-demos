@@ -20,3 +20,10 @@ ingress:
   enabled: false
 node:
   masterKey: xgvWdExD7KQJoDFsY36klQzUmrRVm9ip
+
+mongodb:
+  mongodbDatabase: continuous-development
+  mongodbUsername: rest
+  mongodbPassword: rest01
+  persistence:
+    enabled: false

@@ -26,7 +26,7 @@ spec:
         - name: MASTER_KEY
           value: {{ .Values.node.masterKey }}
         - name: MONGODB_URI
-          value: "mongodb://{{ .Release.Name }}-mongodb/continuous-development"
+          value: "mongodb://{{ .Values.mongodb.mongodbUsername }}:{{ .Values.mongodb.mongodbPassword }}@{{ .Release.Name }}-mongodb/continuous-development"
         - name: NODE_ENV
           value: "production"
         resources:

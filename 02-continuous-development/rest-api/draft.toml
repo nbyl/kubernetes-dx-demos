@@ -5,6 +5,7 @@
     wait = true
     watch = false
     watch-delay = 2
-    auto-connect = false
+    auto-connect = true
     dockerfile = "Dockerfile"
     chart = ""
+    override-ports = ["8080:8080"]

@@ -2,26 +2,11 @@
 
 go into `02-continuous-development/rest-api`
 
+    helm dependency update
     draft create
 
-explore chart and install it:
+ínstall into cluster
 
-    helm install webserver
+    draft up
 
-show generated code:
-
-    helm template webserver
-
-Show conditional stuff in template, upgrade the release using different values:
-
-    helm upgrade -f values-override.yaml <Release> webserver
-
-Afterwards show in browser http://nginx.local/
-
-Show history with:
-
-    helm history <Release>
-
-Rollback to other revision
-
-    helm rollback <Release> <Revision>
+explore cluster, show include mongodb

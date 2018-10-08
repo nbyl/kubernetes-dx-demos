@@ -21,5 +21,13 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}
+        env:
+        env:
+        - name: MASTER_KEY
+          value: {{ .Values.node.masterKey }}
+        - name: MONGODB_URI
+          value: "mongodb://{{ .Release.Name }}-mongodb/continuous-development"
+        - name: NODE_ENV
+          value: "production"
         resources:
 {{ toYaml .Values.resources | indent 12 }}

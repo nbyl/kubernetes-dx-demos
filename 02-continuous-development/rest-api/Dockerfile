@@ -14,5 +14,5 @@ RUN npm install --only=production
 # copy app sources
 COPY . .
 # expose port and define CMD
-EXPOSE 5000
-CMD npm run start
+EXPOSE 8080
+CMD npm start

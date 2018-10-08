@@ -1,0 +1,17 @@
+apiVersion: skaffold/v1alpha3
+kind: Config
+build:
+  tagPolicy:
+    sha256: {}
+  artifacts:
+  - imageName: nbyl/kubedx
+deploy:
+  helm:
+    releases:
+    - name: kubedx
+      chartPath: charts/kubedx
+      values:
+        image: nbyl/kubedx
+      #wait: true
+      #valuesFiles:
+      #- helm-skaffold-values.yaml
